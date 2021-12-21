@@ -1,0 +1,37 @@
+{
+  "name": "test-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "babel . --ignore node_modules,build --out-dir build",
+    "start": "babel-node ./src/server.js",
+    "start:dev": "nodemon --watch src/ src/server.js",
+    "start:prod": "node build/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk-template": "^0.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "module": "^1.2.5",
+    "sockjs": "^0.3.24",
+    "url": "^0.11.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "nodemon": "^2.0.15"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ]
+  }
+}
